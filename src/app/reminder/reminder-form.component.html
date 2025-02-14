@@ -1,0 +1,89 @@
+<div class="modern-container">
+    <div class="modern-card">
+      <!-- Header Section -->
+      <div class="modern-header">
+        <h1 class="modern-title">{{ "AppName" | translate }}</h1>
+      </div>
+
+  
+      <!-- Form Section -->
+      <form [formGroup]="remindForm" (ngSubmit)="onSubmit()" class="modern-form">
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email" class="modern-label">{{ "Email" | translate }}</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="modern-input"
+            [placeholder]="'EmailTextbox' | translate"
+          />
+        </div>
+  
+        <!-- Message Field -->
+        <div class="form-group">
+          <label for="text" class="modern-label">{{ "Message" | translate }}</label>
+          <textarea
+            id="text"
+            formControlName="text"
+            class="modern-input"
+            [placeholder]="'MessageTextbox' | translate"></textarea>
+        </div>
+  
+        <!-- Date Field -->
+        <div class="form-group">
+          <label for="sendDate" class="modern-label">{{ "Date" | translate }}</label>
+          <input
+            type="date"
+            id="sendDate"
+            class="modern-input"
+            formControlName="sendDate"
+            [min]="minDate"
+            [placeholder]="'DateTextbox' | translate"
+          />
+        </div>
+  
+        <!-- Time Field -->
+        <div class="form-group">
+          <label for="time" class="modern-label">{{ "Time" | translate }}</label>
+          <input
+          id="time"
+          formControlName="time"
+          type="text"
+          class="modern-input"
+          [ngxMatTimepicker]="picker"
+          readonly
+          [placeholder]="'TimeBox' | translate"
+          (timeSet)="onTimeChange($event)"
+          />
+          <ngx-mat-timepicker #picker></ngx-mat-timepicker>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" class="modern-button" 
+        [disabled]="isSubmitting">
+        <span *ngIf="!isSubmitting">{{ "Submit" | translate }}</span>
+          <span *ngIf="isSubmitting">
+            <span class="spinner"></span>
+            {{ "Loading" | translate }}
+          </span>
+        </button>
+        
+        <div class="modal-body">
+            <p>{{ "MessageContentNote" | translate }}</p>
+          </div>
+
+          <div class="modern-lang-switcher">
+            <span 
+              class="lang-option" 
+              [class.active]="isEnglish" 
+              (click)="switchLanguage(true)">ENG</span>
+            <span class="separator">:</span>
+            <span 
+              class="lang-option" 
+              [class.active]="!isEnglish" 
+              (click)="switchLanguage(false)">عربي</span>
+          </div>
+      </form>
+    </div>
+  </div>

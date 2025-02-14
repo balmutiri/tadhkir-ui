@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'NotoKufiArabic'; 
+    src: url('/assets/fonts/NotoKufiArabic/static/NotoKufiArabic-ExtraBold.ttf') format('truetype'); 
+  }
+  @font-face {
+    font-family: 'NotoKufiArabicLight'; 
+    src: url('/assets/fonts/NotoKufiArabic/static/NotoKufiArabic-Light.ttf') format('truetype'); 
+  }
+  
+  html, body {
+    font-family: "NotoKufiArabic", sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; 
+    overflow: hidden;
+    border-color: #000;
+    outline-color: #000;
+  }
+  
+  /* Full Coverage for the Container */
+  .modern-container {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .modern-card {
+    width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Header Styling */
+  .modern-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .modern-title {
+    font-family: "NotoKufiArabic", sans-serif;
+    font-size: 45px;
+    color: #000000;
+  }
+  
+  .modern-lang-switcher {
+    font-family: "NotoKufiArabic", sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .lang-option {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .modern-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modern-label {
+    font-family: "NotoKufiArabic", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  
+  .modern-input {
+    font-family: "NotoKufiArabicLight", sans-serif;
+    padding: 10px;
+    font-size: 14px;
+    color: #333333;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: border 0.3s ease;
+  }
+  
+  .modern-input:focus {
+    border-color: #000000;
+    outline: none;
+  }
+  
+  .modern-button {
+    font-family: "NotoKufiArabic", sans-serif;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .modern-button:hover {
+    background: #333333;
+  }
+  .modern-lang-switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between elements */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Show pointer on hover */
+  }
+  
+  .lang-option {
+    color: gray; /* Default color */
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .lang-option:hover {
+    color: black; /* Highlight on hover */
+  }
+  
+  .lang-option.active {
+    color: rgb(0, 6, 167); /* Highlight selected language */
+  }
+  
+  .separator {
+    color: black;
+  }
+  
+  .modal-body {
+    font-family: "NotoKufiArabicLight", sans-serif;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  ::ng-deep .mat-mdc-snack-bar-container.custom-snackbar {
+    background-color: #9b0101 !important;
+    color: white !important;           
+    font-size: 20px;                    
+    font-family: Arial, sans-serif;     
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px; 
+  }
+  
+  ::ng-deep .mat-mdc-snack-bar-container.custom-snackbar .mat-mdc-snackbar-surface {
+    background-color: #9b0101 !important; 
+    padding: 10px !important;
+    min-height: 10px !important;         
+    border-radius: 8px; 
+  }
+  
+  ::ng-deep .mat-mdc-snack-bar-container.custom-snackbar .mat-mdc-snackbar-surface .mat-mdc-button {
+    color: white !important;
+    font-weight: bold;
+  }
+  ::ng-deep .mat-mdc-snack-bar-container.rtl-snackbar {
+  direction: rtl;
+  text-align: right; 
+  }
+  
+  ::ng-deep .mat-mdc-snack-bar-container.rtl-snackbar .mdc-snackbar__label {
+  text-align: right;
+  font-size: 16px;                    
+  font-family: Arial, sans-serif;     
+  font-weight: bold;
+  }
+  
+  ::ng-deep .mat-mdc-snack-bar-container.ltr-snackbar {
+  direction: ltr;
+  text-align: left; 
+  }
+  ::ng-deep .mat-mdc-snack-bar-container.ltr-snackbar .mdc-snackbar__label {
+  text-align: left; 
+  font-size: 20px;                    
+  font-family: Arial, sans-serif;     
+  font-weight: bold;
+  } 
+  
+  ::ng-deep .mat-mdc-snack-bar-container.success-snackbar .mat-mdc-snackbar-surface {
+    background-color: #0c8d13 !important; 
+    padding: 10px !important;
+    min-height: 10px !important;         
+    border-radius: 8px; 
+    justify-content: center !important;
+  }
+  .spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s linear infinite;
+    margin-right: 5px;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

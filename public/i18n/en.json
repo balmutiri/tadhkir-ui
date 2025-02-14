@@ -1,0 +1,21 @@
+
+{
+    "AppName": "Reminder",
+    "Menu:Home": "Home",
+    "Welcome": "Welcome",
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+    "Submit": "Submit",
+    "Email": "Your Email",
+    "Date": "Send Date",
+    "Time":"Time",
+    "Message": "Message Contect",
+    "MessageContentNote": "*The Message Content Is Encrypted In Our Database.",
+    "FutureDateError": "Please select a future date and time.",
+    "EmailTextbox":"Enter Your Email",
+    "MessageTextbox": "Enter Your Message",
+    "TimeBox":"Select a time",
+    "DateTextbox":"dd/mm/yyyy",
+    "Success": "Your request has been sent successfully.",
+    "Loading": "Loading...",
+    "SubmitSuccessfully": "Submit Successfully ✔"
+  }
